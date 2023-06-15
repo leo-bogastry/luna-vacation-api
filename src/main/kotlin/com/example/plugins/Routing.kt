@@ -9,7 +9,7 @@ import java.time.LocalDate
 fun Application.configureRouting() {
     routing {
         authenticate("auth-jwt") {
-            get("/imionvacation") {
+            get("/onvacation") {
                 val today = LocalDate.now()
                 if (today.dayOfMonth % 2 == 0) {
                     call.respondText("Today you have a day off")
